@@ -3,28 +3,24 @@
 ---
 ## Branches.
  - CLIBTemplate_OpenEpiCentre_LINUX.
- - CLIBTemplate_OpenEpiCentre_WINDOWS
    
 ---
 ## Using.
-### Ubuntu LINUX.
+### LINUX Ubuntu.
 version: Ubuntu 24.04.4 LTS.
 
-### Visual Studio Code.
-Version: 1.116.0.
+### IntelliJ IDEA.
+Version: 2026.1.1
 
+Estensions:
+ - CLion C and C++.
+ - CMake.
+
+---
 ### Dependencies.
- - #### GCC toolchain.
+ - #### IntelliJ IDEA.
 ````
-sudo apt install build-essential gdb
-````
- - #### VS Code.
-````
-sudo snap install --classic code
-````
- - #### C/C++ Extension Pack.
-````
-code --install-extension ms-vscode.cpptools-extension-pack
+sudo snap install intellij-idea-ultimate --classic
 ````
 
 ---
