@@ -15,6 +15,7 @@
 **Extensions:**
  - CMake.
  - CLion C and C++.
+ - Compilation Database.
 
 ---
 ### Dependencies.
