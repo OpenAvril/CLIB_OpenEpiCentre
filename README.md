@@ -7,20 +7,29 @@
 ---
 ## Using.
 ### LINUX Ubuntu.
-version: Ubuntu 24.04.4 LTS.
+**version:** Ubuntu 24.04.4 LTS.
 
 ### IntelliJ IDEA.
-Version: 2026.1.1
+**Version:** 2026.1.1
 
-Estensions:
- - CLion C and C++.
+**Extensions:**
  - CMake.
+ - CLion C and C++.
 
 ---
 ### Dependencies.
- - #### IntelliJ IDEA.
+ #### - IntelliJ IDEA.
 ````
 sudo snap install intellij-idea-ultimate --classic
+````
+ #### - C/C++ toolchain (compiler, debugger, and build system).
+````
+sudo apt update
+sudo apt install build-essential cmake gcc g++ gdb
+````
+ #### - CLion.
+````
+ sudo snap install clion --classic
 ````
 
 ---
