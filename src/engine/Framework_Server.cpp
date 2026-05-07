@@ -3,7 +3,7 @@
 	CLIBOpenEpiCentre::Concurrent* CLIBOpenEpiCentre::Framework_Server::_stat_STRUCT_Concurrent;
 	CLIBOpenEpiCentre::Input* CLIBOpenEpiCentre::Framework_Server::_stat_STRUCT_Input;
 	CLIBOpenEpiCentre::Output* CLIBOpenEpiCentre::Framework_Server::_stat_STRUCT_Output;
-	CLIBOpenEpiCentre::User_Algorithim* CLIBOpenEpiCentre::Framework_Server::_stat_CLASS_ptr_User_Algorithim;
+	CLIBOpenEpiCentre::User_Algorithm* CLIBOpenEpiCentre::Framework_Server::_stat_CLASS_ptr_User_Algorithm;
 	CLIBOpenEpiCentre::User_Input* CLIBOpenEpiCentre::Framework_Server::_stat_STRUCT_User_Input;
 	CLIBOpenEpiCentre::User_Output* CLIBOpenEpiCentre::Framework_Server::_stat_STRUCT_User_Output;
 // public.
@@ -28,7 +28,7 @@
 		std::cout << "entered dyn_REG_boot1_DEFINE_Framework_Server()" << std::endl;
 		obj->dyn_CLASS_get_ptr_Server()->dyn_REG_boot1_DEFINE_Server(obj);
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_boot1_DEFINE_Global();
-		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_REG_boot1_DEFINE_Algorithim(obj);
+		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_REG_boot1_DEFINE_Algorithm(obj);
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_boot1_DEFINE_Data(obj);
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_boot1_DEFINE_Data_Control(obj);
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_REG_boot1_DEFINE_Execute(obj);
@@ -40,7 +40,7 @@
 		std::cout << "entered dyn_REG_boot2_SUBSTANTIATE_Framework_Server()" << std::endl;
 		obj->dyn_CLASS_get_ptr_Server()->dyn_REG_boot2_SUBSTANTIATE_Server(obj);
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_boot2_SUBSTANTIATE_Global();
-		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_REG_boot2_SUBSTANTIATE_Algorithim(obj);
+		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_REG_boot2_SUBSTANTIATE_Algorithm(obj);
 		for (uint8_t concurrentThreadId = 0; concurrentThreadId < uint8_t(3); concurrentThreadId++)//NUMBER OF CONCURRENT THREADS.
 		{
 			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_STRUCT_get_Item_On_list_Of_ptr_Concurrent(concurrentThreadId)->dyn_REG_boot2_SUBSTANTIATE_Concurrent();
@@ -55,7 +55,7 @@
 		std::cout << "entered dyn_REG_boot3_INITIALISE_Framework_Server()" << std::endl;
 		obj->dyn_CLASS_get_ptr_Server()->dyn_REG_boot3_INITIALISE_Server(obj);
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_boot3_INITIALISE_Global();
-		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_REG_boot3_INITIALISE_Algorithim(obj, stat_STRUCT_get_Concurrent());
+		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_REG_boot3_INITIALISE_Algorithm(obj, stat_STRUCT_get_Concurrent());
 		for (uint8_t concurrentThreadId = 0; concurrentThreadId < uint8_t(3); concurrentThreadId++)//NUMBER OF CONCURRENT THREADS.
 		{
 			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_STRUCT_get_Item_On_list_Of_ptr_Concurrent(concurrentThreadId)->dyn_REG_boot3_INITIALISE_Concurrent(obj);
@@ -88,9 +88,9 @@
 	{
 		return stat_CLASS_get_ptr_Server();
 	}
-	CLIBOpenEpiCentre::User_Algorithim* CLIBOpenEpiCentre::Framework_Server::dyn_STRUCT_get_User_Algorithim()
+	CLIBOpenEpiCentre::User_Algorithm* CLIBOpenEpiCentre::Framework_Server::dyn_STRUCT_get_User_Algorithm()
 	{
-		return stat_STRUCT_get_User_Algorithim();
+		return stat_STRUCT_get_User_Algorithm();
 	}
 	CLIBOpenEpiCentre::User_Input* CLIBOpenEpiCentre::Framework_Server::dyn_STRUCT_get_User_Input()
 	{
@@ -133,7 +133,7 @@
 	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot0_DECLAIRE()
 	{
 		std::cout << "entered stat_STRUCT_boot0_DECLAIRE()." << std::endl;
-		stat_STRUCT_boot0_DECLAIRE_User_Algorithim();
+		stat_STRUCT_boot0_DECLAIRE_User_Algorithm();
 		stat_STRUCT_boot0_DECLAIRE_User_Input();
 		stat_STRUCT_boot0_DECLAIRE_User_Output();
 		stat_STRUCT_boot0_DECLAIRE_Concurrent();
@@ -144,7 +144,7 @@
 	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot1_DEFINE()
 	{
 		std::cout << "entered stat_STRUCT_boot1_DEFINE()." << std::endl;
-		stat_STRUCT_boot1_DEFINE_User_Algorithim();
+		stat_STRUCT_boot1_DEFINE_User_Algorithm();
 		stat_STRUCT_boot1_DEFINE_User_Input();
 		stat_STRUCT_boot1_DEFINE_User_Output();
 		stat_STRUCT_boot1_DEFINE_Concurrent();
@@ -155,7 +155,7 @@
 	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot3_INITIALISE()
 	{
 		std::cout << "entered stat_STRUCT_boot3_INITIALISE()." << std::endl;
-		stat_STRUCT_boot3_INITIALISE_User_Algorithim();
+		stat_STRUCT_boot3_INITIALISE_User_Algorithm();
 		stat_STRUCT_boot3_INITIALISE_User_Input();
 		stat_STRUCT_boot3_INITIALISE_User_Output();
 		stat_STRUCT_boot3_INITIALISE_Concurrent();
@@ -177,11 +177,11 @@
 	{
 		return _stat_CLASS_ptr_Server;
 	}
-	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot0_DECLAIRE_User_Algorithim()
+	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot0_DECLAIRE_User_Algorithm()
 	{
-		std::cout << "entered stat_STRUCT_boot0_DECLAIRE_User_Algorithim()." << std::endl;
+		std::cout << "entered stat_STRUCT_boot0_DECLAIRE_User_Algorithm()." << std::endl;
 
-		std::cout << "exiting stat_STRUCT_boot0_DECLAIRE_User_Algorithim()." << std::endl;
+		std::cout << "exiting stat_STRUCT_boot0_DECLAIRE_User_Algorithm()." << std::endl;
 	}
 	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot0_DECLAIRE_User_Input()
 	{
@@ -213,11 +213,11 @@
 
 		std::cout << "exiting stat_STRUCT_boot0_DECLAIRE_Output()." << std::endl;
 	}
-	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot1_DEFINE_User_Algorithim()
+	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot1_DEFINE_User_Algorithm()
 	{
-		std::cout << "entered stat_STRUCT_boot1_DEFINE_User_Algorithim()" << std::endl;
-		_stat_CLASS_ptr_User_Algorithim = NULL;
-		std::cout << "exiting stat_STRUCT_boot1_DEFINE_User_Algorithim()" << std::endl;
+		std::cout << "entered stat_STRUCT_boot1_DEFINE_User_Algorithm()" << std::endl;
+		_stat_CLASS_ptr_User_Algorithm = NULL;
+		std::cout << "exiting stat_STRUCT_boot1_DEFINE_User_Algorithm()" << std::endl;
 	}
 	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot1_DEFINE_User_Input()
 	{
@@ -249,12 +249,12 @@
 		_stat_STRUCT_Output = NULL;
 		std::cout << "exiting stat_STRUCT_boot1_DEFINE_Output()" << std::endl;
 	}
-	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot3_INITIALISE_User_Algorithim()
+	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot3_INITIALISE_User_Algorithm()
 	{
-		std::cout << "entered stat_STRUCT_boot3_INITIALISE_User_Algorithim()" << std::endl;
-		_stat_CLASS_ptr_User_Algorithim = new struct CLIBOpenEpiCentre::User_Algorithim();
-		while (stat_STRUCT_get_User_Algorithim() == NULL) {}
-		std::cout << "exiting stat_STRUCT_boot3_INITIALISE_User_Algorithim()" << std::endl;
+		std::cout << "entered stat_STRUCT_boot3_INITIALISE_User_Algorithm()" << std::endl;
+		_stat_CLASS_ptr_User_Algorithm = new struct CLIBOpenEpiCentre::User_Algorithm();
+		while (stat_STRUCT_get_User_Algorithm() == NULL) {}
+		std::cout << "exiting stat_STRUCT_boot3_INITIALISE_User_Algorithm()" << std::endl;
 	}
 	void CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_boot3_INITIALISE_User_Input()
 	{
@@ -303,9 +303,9 @@
 	{
 		return _stat_STRUCT_Output;
 	}
-	CLIBOpenEpiCentre::User_Algorithim* CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_get_User_Algorithim()
+	CLIBOpenEpiCentre::User_Algorithm* CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_get_User_Algorithm()
 	{
-		return _stat_CLASS_ptr_User_Algorithim;
+		return _stat_CLASS_ptr_User_Algorithm;
 	}
 	CLIBOpenEpiCentre::User_Input* CLIBOpenEpiCentre::Framework_Server::stat_STRUCT_get_User_Input()
 	{

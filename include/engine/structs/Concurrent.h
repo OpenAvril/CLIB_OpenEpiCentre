@@ -11,10 +11,10 @@ namespace CLIBOpenEpiCentre
         void dyn_REG_boot3_INITIALISE_Concurrent(class Framework_Server* obj);
         void dyn_REG_boot4_INSTANTIATE_Concurrent();
         class Object* dyn_REG_get_ptr_Item_Of_ptr_Algorithms_Subset();
-        void dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(class Algorithim_praise0* objAlgorithimSubset);
-        void dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(class Algorithim_praise1* objAlgorithimSubset);
-        void dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(class Algorithim_praise2* objAlgorithimSubset);
-        void dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(class Algorithim_praise3* objAlgorithimSubset);
+        void dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(class Algorithm_praise0* objAlgorithmSubset);
+        void dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(class Algorithm_praise1* objAlgorithmSubset);
+        void dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(class Algorithm_praise2* objAlgorithmSubset);
+        void dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(class Algorithm_praise3* objAlgorithmSubset);
         static void stat_app_thread_Concurrency(class Framework_Server* obj, uint8_t concurrent_threadID);
         static void stat_CLASS_boot0_DECLAIRE_Concurrent();
         static void stat_CLASS_boot1_DEFINE_Concurrent();
@@ -23,7 +23,7 @@ namespace CLIBOpenEpiCentre
         static void stat_REG_boot0_DECLAIRE_Concurrent();
     private:
         static class Concurrent_Control* _stat_CLASS_ptr_Concurrent_Control;
-        static std::list<class Object*>* _REG_ptr_List_Of_PraiseAlgorithimSubset;
+        static std::list<class Object*>* _REG_ptr_List_Of_PraiseAlgorithmSubset;
         static void stat_CLASS_boot1_DEFINE_Concurrent_Control();
         static void stat_CLASS_boot3_INITIALISE_Concurrent_Control();
         static class Concurrent_Control* stat_CLASS_get_ptr_Concurrent_Control();

@@ -1,4 +1,4 @@
-#include "pch.h"
+
 namespace CLIBOpenEpiCentre
 {
     class Execute_Control

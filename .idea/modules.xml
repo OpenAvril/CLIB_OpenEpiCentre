@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/CLIB_OpenEpiCentre.iml" filepath="$PROJECT_DIR$/.idea/CLIB_OpenEpiCentre.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CLIB_OpenEpiCentre.CMake.iml" filepath="$PROJECT_DIR$/.idea/CLIB_OpenEpiCentre.CMake.iml" />
     </modules>
   </component>
 </project>

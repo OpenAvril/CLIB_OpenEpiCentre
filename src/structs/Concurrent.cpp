@@ -1,13 +1,13 @@
 
     CLIBOpenEpiCentre::Concurrent_Control* CLIBOpenEpiCentre::Concurrent::_stat_CLASS_ptr_Concurrent_Control;
-    std::list<CLIBOpenEpiCentre::Object*>* CLIBOpenEpiCentre::Concurrent::_REG_ptr_List_Of_PraiseAlgorithimSubset;
+    std::list<CLIBOpenEpiCentre::Object*>* CLIBOpenEpiCentre::Concurrent::_REG_ptr_List_Of_PraiseAlgorithmSubset;
 // public.
     void CLIBOpenEpiCentre::Concurrent::app_do_ConcurrentAlgorithm_For_PraiseEventId(Framework_Server* obj, uint8_t playerId, uint8_t praiseEventId, Object* ptr_Algorithm_Subset, Object* ptr_Input_Subset, Object* ptr_Output_Subset)
     {
-        Algorithim_praise0* ptr_Algorithm_praise0_Subset = reinterpret_cast<Algorithim_praise0*>(ptr_Algorithm_Subset);
-        Algorithim_praise1* ptr_Algorithm_praise1_Subset = reinterpret_cast<Algorithim_praise1*>(ptr_Algorithm_Subset);
-        Algorithim_praise2* ptr_Algorithm_praise2_Subset = reinterpret_cast<Algorithim_praise2*>(ptr_Algorithm_Subset);
-        Algorithim_praise3* ptr_Algorithm_praise3_Subset = reinterpret_cast<Algorithim_praise3*>(ptr_Algorithm_Subset);
+        Algorithm_praise0* ptr_Algorithm_praise0_Subset = reinterpret_cast<Algorithm_praise0*>(ptr_Algorithm_Subset);
+        Algorithm_praise1* ptr_Algorithm_praise1_Subset = reinterpret_cast<Algorithm_praise1*>(ptr_Algorithm_Subset);
+        Algorithm_praise2* ptr_Algorithm_praise2_Subset = reinterpret_cast<Algorithm_praise2*>(ptr_Algorithm_Subset);
+        Algorithm_praise3* ptr_Algorithm_praise3_Subset = reinterpret_cast<Algorithm_praise3*>(ptr_Algorithm_Subset);
         switch (praiseEventId)
         {
         case uint8_t(0):
@@ -61,29 +61,29 @@
         std::advance(temp, 0);
         return *temp;
     }
-    void CLIBOpenEpiCentre::Concurrent::dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(CLIBOpenEpiCentre::Algorithim_praise0* objAlgorithimSubset)
+    void CLIBOpenEpiCentre::Concurrent::dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(CLIBOpenEpiCentre::Algorithm_praise0* objAlgorithmSubset)
     {
         auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
 		std::advance(temp, 0);
-        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objAlgorithimSubset);
+        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objAlgorithmSubset);
     }
-    void CLIBOpenEpiCentre::Concurrent::dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(CLIBOpenEpiCentre::Algorithim_praise1* objAlgorithimSubset)
+    void CLIBOpenEpiCentre::Concurrent::dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(CLIBOpenEpiCentre::Algorithm_praise1* objAlgorithmSubset)
     {
         auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
         std::advance(temp, 0);
-        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objAlgorithimSubset);
+        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objAlgorithmSubset);
     }
-    void CLIBOpenEpiCentre::Concurrent::dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(CLIBOpenEpiCentre::Algorithim_praise2* objAlgorithimSubset)
+    void CLIBOpenEpiCentre::Concurrent::dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(CLIBOpenEpiCentre::Algorithm_praise2* objAlgorithmSubset)
     {
         auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
         std::advance(temp, 0);
-        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objAlgorithimSubset);
+        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objAlgorithmSubset);
     }
-    void CLIBOpenEpiCentre::Concurrent::dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(CLIBOpenEpiCentre::Algorithim_praise3* objAlgorithimSubset)
+    void CLIBOpenEpiCentre::Concurrent::dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(CLIBOpenEpiCentre::Algorithm_praise3* objAlgorithmSubset)
     {
         auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
         std::advance(temp, 0);
-        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objAlgorithimSubset);
+        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objAlgorithmSubset);
     }
     void CLIBOpenEpiCentre::Concurrent::stat_app_thread_Concurrency(CLIBOpenEpiCentre::Framework_Server* obj, uint8_t concurrent_threadID)
     {
@@ -189,11 +189,11 @@
     }
     void CLIBOpenEpiCentre::Concurrent::stat_REG_boot1_DEFINE_list_Of_Algorithms_Subset()
     {
-        _REG_ptr_List_Of_PraiseAlgorithimSubset = NULL;
+        _REG_ptr_List_Of_PraiseAlgorithmSubset = NULL;
     }
     void CLIBOpenEpiCentre::Concurrent::stat_REG_boot2_SUBSTANTIATE_list_Of_Algorithms_Subset()
     {
-        _REG_ptr_List_Of_PraiseAlgorithimSubset = new std::list<class CLIBOpenEpiCentre::Object*>();
+        _REG_ptr_List_Of_PraiseAlgorithmSubset = new std::list<class CLIBOpenEpiCentre::Object*>();
         while (stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset() == NULL) {}
         stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->resize(uint8_t(1));
         auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
@@ -204,9 +204,9 @@
     {
         auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
         std::advance(temp, uint8_t(0));
-        *temp = obj->dyn_STRUCT_get_User_Algorithim()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithimSubsets(praiseId);
+        *temp = obj->dyn_STRUCT_get_User_Algorithm()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(praiseId);
     }
     std::list<CLIBOpenEpiCentre::Object*>* CLIBOpenEpiCentre::Concurrent::stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()
     {
-        return _REG_ptr_List_Of_PraiseAlgorithimSubset;
+        return _REG_ptr_List_Of_PraiseAlgorithmSubset;
     }

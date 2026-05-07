@@ -19,19 +19,19 @@
         switch (praiseEventId)
         {
         case 0:
-            objConcurrnet->dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(reinterpret_cast<Algorithim_praise0*>(obj->dyn_STRUCT_get_User_Algorithim()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithimSubsets(praiseEventId)));
+            objConcurrnet->dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(reinterpret_cast<Algorithm_praise0*>(obj->dyn_STRUCT_get_User_Algorithm()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(praiseEventId)));
             break;
 
         case 1:
-            objConcurrnet->dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(reinterpret_cast<Algorithim_praise1*>(obj->dyn_STRUCT_get_User_Algorithim()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithimSubsets(praiseEventId)));
+            objConcurrnet->dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(reinterpret_cast<Algorithm_praise1*>(obj->dyn_STRUCT_get_User_Algorithm()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(praiseEventId)));
             break;
 
         case 2:
-            objConcurrnet->dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(reinterpret_cast<Algorithim_praise2*>(obj->dyn_STRUCT_get_User_Algorithim()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithimSubsets(praiseEventId)));
+            objConcurrnet->dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(reinterpret_cast<Algorithm_praise2*>(obj->dyn_STRUCT_get_User_Algorithm()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(praiseEventId)));
             break;
 
         case 3:
-            objConcurrnet->dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(reinterpret_cast<Algorithim_praise3*>(obj->dyn_STRUCT_get_User_Algorithim()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithimSubsets(praiseEventId)));
+            objConcurrnet->dyn_REG_set_ptr_Item_Of_ptr_Algorithms_Subset(reinterpret_cast<Algorithm_praise3*>(obj->dyn_STRUCT_get_User_Algorithm()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(praiseEventId)));
             break;
 
         }

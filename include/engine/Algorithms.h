@@ -1,4 +1,4 @@
-#include "pch.h"
+
 namespace CLIBOpenEpiCentre
 {
     class Algorithms
@@ -7,15 +7,15 @@ namespace CLIBOpenEpiCentre
         Algorithms();
         virtual ~Algorithms();
         struct Concurrent* dyn_STRUCT_get_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadId);
-        void dyn_REG_boot1_DEFINE_Algorithim(class Framework_Server* obj);
-        void dyn_REG_boot2_SUBSTANTIATE_Algorithim(class Framework_Server* obj);
-        void dyn_REG_boot3_INITIALISE_Algorithim(class Framework_Server* obj, struct Concurrent* objConcurrent);
-        void dyn_REG_boot4_INSTANTIATE_Algorithim(class Framework_Server* obj);
-        static void stat_CLASS_boot0_DECLAIRE_Algorithim();
-        static void stat_CLASS_boot1_DEFINE_Algorithim();
-        static void stat_CLASS_boot3_INITIALISE_Algorithim();
-        static void stat_CLASS_boot4_INSTANTIATE_Algorithim();
-        static void stat_REG_boot0_DECLAIRE_Algorithim();
+        void dyn_REG_boot1_DEFINE_Algorithm(class Framework_Server* obj);
+        void dyn_REG_boot2_SUBSTANTIATE_Algorithm(class Framework_Server* obj);
+        void dyn_REG_boot3_INITIALISE_Algorithm(class Framework_Server* obj, struct Concurrent* objConcurrent);
+        void dyn_REG_boot4_INSTANTIATE_Algorithm(class Framework_Server* obj);
+        static void stat_CLASS_boot0_DECLAIRE_Algorithm();
+        static void stat_CLASS_boot1_DEFINE_Algorithm();
+        static void stat_CLASS_boot3_INITIALISE_Algorithm();
+        static void stat_CLASS_boot4_INSTANTIATE_Algorithm();
+        static void stat_REG_boot0_DECLAIRE_Algorithm();
     private:
         static std::list<struct Concurrent*>* _stat_REG_ptr_list_Of_ptr_Concurrent;
         static void stat_REG_boot1_DEFINE_List_Of_ptr_Concurrent();

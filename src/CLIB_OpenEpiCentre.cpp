@@ -1,17 +1,17 @@
 
-class CLIBOpenEpiCentre::Framework_Server* _CLASS_ptr_Framework_Server;
-bool* _stat_REG_get_flag_isMemberFunctionINSTANTIATED;
+	class CLIBOpenEpiCentre::Framework_Server* _CLASS_ptr_Framework_Server;
+	bool* _stat_REG_get_flag_isMemberFunctionINSTANTIATED;
 // public.
-void CLIBOpenEpiCentre::ConcurrentServerIO::app_FUNCT_flip_Input_DoubleBuffer()
-{-
-	if (stat_REG_get_ptr_flag_isMemberFunctionINSTANTIATED()[1] == false) {
-		stat_CLASS_get_ptr_Framework_Server()->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_flip_Input_DoubleBuffer();
+	void CLIBOpenEpiCentre::ConcurrentServerIO::app_FUNCT_flip_Input_DoubleBuffer()
+	{
+		if (stat_REG_get_ptr_flag_isMemberFunctionINSTANTIATED()[1] == false) {
+			stat_CLASS_get_ptr_Framework_Server()->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_flip_Input_DoubleBuffer();
+		}
+		else {
+			stat_REG_get_ptr_flag_isMemberFunctionINSTANTIATED()[1] = false;
+			stat_app_FUNCT_Calc_IsAllINSTANTIATED();//INSTANTIATE this member function last.
+		}
 	}
-	else {
-		stat_REG_get_ptr_flag_isMemberFunctionINSTANTIATED()[1] = false;
-		stat_app_FUNCT_Calc_IsAllINSTANTIATED();//INSTANTIATE this member function last.
-	}
-}
 void* CLIBOpenEpiCentre::ConcurrentServerIO::app_FUNCT_generate_Program()
 {
 	std::cout << "entered app_FUNCT_generate_Program()." << std::endl;
@@ -36,10 +36,10 @@ void* CLIBOpenEpiCentre::ConcurrentServerIO::app_FUNCT_generate_Program()
 	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_User_Output()->dyn_REG_boot3_INITIALISE_User_Output();
 	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_User_Output()->dyn_REG_boot4_INSTANTIATE_User_Output();
 
-	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_User_Algorithim()->dyn_REG_boot1_DEFINE_User_Algorithim();
-	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_User_Algorithim()->dyn_REG_boot2_SUBSTANTIATE_User_Algorithim();
-	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_User_Algorithim()->dyn_REG_boot3_INITIALISE_User_Algorithim();
-	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_User_Algorithim()->dyn_REG_boot4_INSTANTIATE_User_Algorithim();
+	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_User_Algorithm()->dyn_REG_boot1_DEFINE_User_Algorithm();
+	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_User_Algorithm()->dyn_REG_boot2_SUBSTANTIATE_User_Algorithm();
+	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_User_Algorithm()->dyn_REG_boot3_INITIALISE_User_Algorithm();
+	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_User_Algorithm()->dyn_REG_boot4_INSTANTIATE_User_Algorithm();
 
 	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_Input()->dyn_REG_boot1_DEFINE_Input();
 	stat_CLASS_get_ptr_Framework_Server()->dyn_STRUCT_get_Input()->dyn_REG_boot2_SUBSTANTIATE_Input();
