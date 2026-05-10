@@ -14,7 +14,19 @@
 
 ---
 ### Dependencies.
-#### - JetBrains Toolbox App. (https://www.jetbrains.com/toolbox-app/)
+#### - GCC toolchain.
+````
+sudo apt install build-essential gdb -y
+````
+#### - snap.
+````
+sudo apt install snapd
+````
+
+#### - IntelliJ IDEA.
+````
+sudo snap install intellij-idea-ultimate --classic
+````
 **Manage your IDEs the easy way: Tools TAB.**
  - IntelliJ IDEA. (https://www.jetbrains.com/idea/download/?section=linux)
  - CLion. (https://plugins.jetbrains.com/plugin/28804-clion-c-and-c-)
