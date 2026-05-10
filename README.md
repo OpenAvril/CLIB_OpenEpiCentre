@@ -27,10 +27,6 @@ sudo apt install snapd
 ````
 sudo snap install intellij-idea-ultimate --classic
 ````
-**Manage your IDEs the easy way: Tools TAB.**
- - IntelliJ IDEA. (https://www.jetbrains.com/idea/download/?section=linux)
- - CLion. (https://plugins.jetbrains.com/plugin/28804-clion-c-and-c-)
-
 **Plugins - Marketplace.**
  - Native Build Tools.
  - CMake.
