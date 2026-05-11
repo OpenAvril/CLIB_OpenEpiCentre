@@ -7,7 +7,7 @@ namespace CLIBOpenEpiCentre
         void app_do_ConcurrentAlgorithm_For_PraiseEventId(Framework_Server obj, uint8_t playerId, uint8_t praiseEventId, class Object* ptr_Input_Subset, class Object* ptr_Output_Subset);
         class Concurrent_Control* dyn_CLASS_get_ptr_Concurrent_Control();
         void dyn_REG_boot1_DEFINE_Concurrent();
-        void dyn_REG_boot2_SUBSTANTIATE_Concurrent();z
+        void dyn_REG_boot2_SUBSTANTIATE_Concurrent();
         void dyn_REG_boot3_INITIALISE_Concurrent(Framework_Server* obj);
         void dyn_REG_boot4_INSTANTIATE_Concurrent();
         static void stat_app_thread_Concurrency(Framework_Server* obj, uint8_t concurrent_threadID);

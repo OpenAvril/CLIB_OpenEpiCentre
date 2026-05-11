@@ -14,6 +14,7 @@
 #include "structs/User_Output.h"
 #include <iostream>
 	CLIBOpenEpiCentre::Server* CLIBOpenEpiCentre::Framework_Server::_stat_CLASS_ptr_Server;
+	CLIBOpenEpiCentre::Global* CLIBOpenEpiCentre::Framework_Server::_stat_CLASS_ptr_Global;
 	CLIBOpenEpiCentre::Concurrent* CLIBOpenEpiCentre::Framework_Server::_stat_STRUCT_Concurrent;
 	CLIBOpenEpiCentre::Input* CLIBOpenEpiCentre::Framework_Server::_stat_STRUCT_Input;
 	CLIBOpenEpiCentre::Output* CLIBOpenEpiCentre::Framework_Server::_stat_STRUCT_Output;
@@ -25,9 +26,6 @@
 	{
 		std::cout << "entered CONSTRUCTOR of Framework_Server()" << std::endl;
 		stat_CLASS_boot0_DECLARE_Framework_Server();
-		stat_CLASS_boot1_DEFINE_Framework_Server();
-		stat_CLASS_boot3_INITIALISE_Framework_Server();
-		stat_REG_boot0_DECLARE_Framework_Server();
 		std::cout << "exiting CONSTRUCTOR of Framework_Server()" << std::endl;
 	}
 	CLIBOpenEpiCentre::Framework_Server::~Framework_Server()
@@ -36,6 +34,22 @@
 		delete _stat_STRUCT_Concurrent;
 		delete _stat_STRUCT_Input;
 		delete _stat_STRUCT_Output;
+		delete _stat_CLASS_ptr_Global;
+	}
+	void dyn_CLASS_Create_Architecture()
+	{
+		stat_CLASS_boot1_DEFINE_Framework_Server();
+		stat_CLASS_boot3_INITIALISE_Framework_Server();
+		stat_REG_boot0_DECLARE_Framework_Server();
+	}
+	void dyn_CLASS_create_Global_and_Settings()
+	{
+		stat_CLASS_boot1_DEFINE_Global();
+		stat_CLASS_boot3_INITIALISE_Global();
+	}
+	CLIBOpenEpiCentre::Global* CLIBOpenEpiCentre::Server::dyn_CLASS_get_ptr_Global()
+	{
+		return stat_CLASS_get_ptr_Global();
 	}
 	void CLIBOpenEpiCentre::Framework_Server::dyn_REG_boot1_DEFINE_Framework_Server(CLIBOpenEpiCentre::Framework_Server* obj)
 	{
@@ -80,10 +94,10 @@
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_CLASS_get_ptr_Execute_Control()->dyn_REG_boot3_INITIALISE_Execute_Control(obj);
 		std::cout << "exiting dyn_REG_boot3_INITIALISE_Framework_Server()" << std::endl;
 	}
-	void CLIBOpenEpiCentre::Framework_Server::dyn_PGM_boot4_INSTANTIATE_Framework_Server(CLIBOpenEpiCentre::Framework_Server* obj)
+	void CLIBOpenEpiCentre::Framework_Server::dyn_PGM_boot4_INSTANTIATE_Framework_Server(Framework_Server* obj)
 	{
 		std::cout << "entered dyn_PGM_boot4_INSTANTIATE_Framework_Server()" << std::endl;
-		std::cout << "# app booted." << std::endl;
+		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_REG_boot4_INSTANTIATE_Execute(obj);
 		std::cout << "exiting dyn_PGM_boot4_INSTANTIATE_Framework_Server()" << std::endl;
 	}
 	CLIBOpenEpiCentre::Concurrent* CLIBOpenEpiCentre::Framework_Server::dyn_STRUCT_get_Concurrent()
@@ -178,14 +192,27 @@
 		std::cout << "exiting stat_STRUCT_boot3_INITIALISE()." << std::endl;
 	}
 // private.
+	void CLIBOpenEpiCentre::Framework_Server::stat_CLASS_boot1_DEFINE_Global()
+	{
+		_stat_CLASS_ptr_Global = nullptr;
+	}
 	void CLIBOpenEpiCentre::Framework_Server::stat_CLASS_boot1_DEFINE_Server()
 	{
 		_stat_CLASS_ptr_Server = nullptr;
 	}
 	void CLIBOpenEpiCentre::Framework_Server::stat_CLASS_boot3_INITIALISE_Server()
 	{
-		_stat_CLASS_ptr_Server = new CLIBOpenEpiCentre::Server();
+		_stat_CLASS_ptr_Server = new Server();
 		while (stat_CLASS_get_ptr_Server() == nullptr) {}
+	}
+	void CLIBOpenEpiCentre::Framework_Server::stat_CLASS_boot3_INITIALISE_Global()
+	{
+		_stat_CLASS_ptr_Global = new Global();
+		while (stat_CLASS_get_ptr_Global() == nullptr) {}
+	}
+	CLIBOpenEpiCentre::Global* CLIBOpenEpiCentre::Framework_Server::stat_CLASS_get_ptr_Global()
+	{
+		return _stat_CLASS_ptr_Global;
 	}
 	CLIBOpenEpiCentre::Server* CLIBOpenEpiCentre::Framework_Server::stat_CLASS_get_ptr_Server()
 	{

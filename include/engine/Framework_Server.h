@@ -6,6 +6,7 @@ namespace CLIBOpenEpiCentre
     public:
         Framework_Server();
         virtual ~Framework_Server();
+        void dyn_CLASS_Create_Architecture();
         class Server* dyn_CLASS_get_ptr_Server();
         void dyn_REG_boot1_DEFINE_Framework_Server(class Framework_Server* obj);
         void dyn_REG_boot2_SUBSTANTIATE_Framework_Server(class Framework_Server* obj);
