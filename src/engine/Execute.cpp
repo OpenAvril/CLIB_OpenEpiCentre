@@ -93,7 +93,7 @@
     void CLIBOpenEpiCentre::Execute::stat_CLASS_boot4_INSTANTIATE_Execute()
     {
         std::cout << "entered stat_CLASS_boot4_INSTANTIATE_Execute()" << std::endl;
-        /*
+
         unsigned char* bytes_uint8_t = CLIBOpenEpiCentre::Global::stat_CONVERT_uint8_t_to_ByteArray(UINT8_MAX);
 
         std::cout << "entered CHECK memeber function of CLIBLaunchEnableForConcurrentThreadsAtSERVER() " << std::endl;
@@ -127,7 +127,7 @@
         std::cout << "done CHECK memeber function of CLIBWriteEnableForThreadsAtSERVEROUTPUTSEND() " << std::endl;
 
         delete bytes_uint8_t;
-        */
+
         std::cout << "exiting stat_CLASS_boot4_INSTANTIATE_Execute()" << std::endl;
     }
     void CLIBOpenEpiCentre::Execute::stat_REG_boot0_DECLARE_Execute()

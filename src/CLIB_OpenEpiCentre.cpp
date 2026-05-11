@@ -1,22 +1,20 @@
 
-#include "CLIB_OpenEpiCentre.h"
-#include "engine/Algorithms.h"
-#include "engine/Data.h"
-#include "engine/Data_Control.h"
-#include "engine/Framework_Server.h"
-#include "engine/Global.h"
-#include "engine/Server.h"
-#include "structs/Concurrent.h"
-#include "structs/Input.h"
-#include "structs/Input_Control.h"
-#include "structs/Output.h"
-#include "structs/Output_Control.h"
-#include "structs/User_Algorithm.h"
-#include "structs/User_Input.h"
-#include "structs/User_Output.h"
+#include "../include/CLIB_OpenEpiCentre.h"
+#include "../include/engine/Algorithms.h"
+#include "../include/engine/Data.h"
+#include "../include/engine/Data_Control.h"
+#include "../include/engine/Framework_Server.h"
+#include "../include/engine/Global.h"
+#include "../include/engine/Server.h"
+#include "../include/structs/Concurrent.h"
+#include "../include/structs/Input.h"
+#include "../include/structs/Output.h"
+#include "../include/structs/User_Algorithm.h"
+#include "../include/structs/User_Input.h"
+#include "../include/structs/User_Output.h"
 #include <cstdint>
 #include <iostream>
-class CLIBOpenEpiCentre::Framework_Server* _CLASS_ptr_Framework_Server;
+	class CLIBOpenEpiCentre::Framework_Server* _CLASS_ptr_Framework_Server;
 	bool* _stat_REG_get_flag_isMemberFunctionINSTANTIATED;
 // public.
 	void CLIBOpenEpiCentre::ConcurrentServerIO::app_FUNCT_flip_Input_DoubleBuffer()

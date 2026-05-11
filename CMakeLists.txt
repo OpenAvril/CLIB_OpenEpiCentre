@@ -15,7 +15,6 @@ add_library(CLIB_OpenEpiCentre SHARED
         src/structs/Output.cpp
         include/structs/Concurrent.h
         src/structs/Concurrent.cpp
-        include/structs/Concurrent_Control.h
         include/structs/User_Input.h
         src/structs/User_Input.cpp
         include/structs/User_Output.h
@@ -24,28 +23,10 @@ add_library(CLIB_OpenEpiCentre SHARED
         src/structs/User_Algorithm.cpp
         include/structs/praise_sets/Algorithm_praise0.h
         src/structs/praise_sets/Algorithm_praise0.cpp
-        include/structs/praise_sets/Algorithm_praise1.h
-        src/structs/praise_sets/Algorithm_praise1.cpp
-        include/structs/praise_sets/Algorithm_praise2.h
-        src/structs/praise_sets/Algorithm_praise2.cpp
-        include/structs/praise_sets/Algorithm_praise3.h
-        src/structs/praise_sets/Algorithm_praise3.cpp
         include//structs/praise_sets/Input_praise0.h
         src/structs/praise_sets/Input_praise0.cpp
-        include/structs/praise_sets/Input_praise1.h
-        src/structs/praise_sets/Input_praise1.cpp
-        include/structs/praise_sets/Input_praise2.h
-        src/structs/praise_sets/Input_praise2.cpp
-        include/structs/praise_sets/Input_praise3.h
-        src/structs/praise_sets/Input_praise3.cpp
         include/structs/praise_sets/Output_praise0.h
         src/structs/praise_sets/Output_praise0.cpp
-        include/structs/praise_sets/Output_praise1.h
-        src/structs/praise_sets/Output_praise1.cpp
-        include/structs/praise_sets/Output_praise2.h
-        src/structs/praise_sets/Output_praise2.cpp
-        include/structs/praise_sets/Output_praise3.h
-        src/structs/praise_sets/Output_praise3.cpp
         include/engine/Framework_Server.h
         src/engine/Framework_Server.cpp
         include/engine/Global.h

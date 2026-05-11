@@ -1,4 +1,6 @@
-
+#include "structs/praise_sets/Input_praise0.h"
+#include <cfloat>
+#include <iostream>
 	float* CLIBOpenEpiCentre::Input_praise0::_stat_REG_ptr_Input_praise0_valueA;
 	float* CLIBOpenEpiCentre::Input_praise0::_stat_REG_ptr_Input_praise0_valueB;
 // public.
@@ -42,11 +44,11 @@
 // private.
 	void CLIBOpenEpiCentre::Input_praise0::stat_REG_boot1_DEFINE_Input_praise0_valueA()
 	{
-		_stat_REG_ptr_Input_praise0_valueA = NULL;
+		_stat_REG_ptr_Input_praise0_valueA = nullptr;
 	}
 	void CLIBOpenEpiCentre::Input_praise0::stat_REG_boot1_DEFINE_Input_praise0_valueB()
 	{
-		_stat_REG_ptr_Input_praise0_valueB = NULL;
+		_stat_REG_ptr_Input_praise0_valueB = nullptr;
 	}
 	void CLIBOpenEpiCentre::Input_praise0::stat_REG_boot2_SUBSTANTIATE_Input_praise0_valueA()
 	{

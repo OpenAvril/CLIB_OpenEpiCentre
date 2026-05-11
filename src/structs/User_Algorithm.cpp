@@ -36,6 +36,7 @@
 		}
 		
 	}
+	dyn_CLASS_get_ptr_Algorithm_praise0();
 
 	void CLIBOpenEpiCentre::User_Algorithm::dyn_REG_boot1_DEFINE_User_Algorithm()
 	{

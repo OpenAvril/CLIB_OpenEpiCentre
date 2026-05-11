@@ -1,6 +1,7 @@
-
-#include "Output_praise0.h"
-	double* CLIBOpenEpiCentre::Output_praise0::_REG_ptr_output_praise0_Value = NULL;
+#include "structs/praise_sets/Output_praise0.h"
+#include <cfloat>
+#include <iostream>
+double* CLIBOpenEpiCentre::Output_praise0::_REG_ptr_output_praise0_Value = nullptr;
 // public.
 	void CLIBOpenEpiCentre::Output_praise0::dyn_REG_boot1_DEFINE_Output_praise0()
 	{
@@ -34,11 +35,11 @@
 	{
 		stat_REG_set_Item_output_Value(newValue);
 	}
-	void CLIBOpenEpiCentre::Output_praise0::stat_CLASS_boot0_DECLAIRE_Output_praise0()
+	void CLIBOpenEpiCentre::Output_praise0::stat_CLASS_boot0_DECLARE_Output_praise0()
 	{
-		std::cout << "entered stat_CLASS_boot0_DECLAIRE_Output_praise0()" << std::endl;
+		std::cout << "entered stat_CLASS_boot0_DECLARE_Output_praise0()" << std::endl;
 
-		std::cout << "exiting stat_CLASS_boot0_DECLAIRE_Output_praise0()" << std::endl;
+		std::cout << "exiting stat_CLASS_boot0_DECLARE_Output_praise0()" << std::endl;
 	}
 	void CLIBOpenEpiCentre::Output_praise0::stat_CLASS_boot1_DEFINE_Output_praise0()
 	{
@@ -58,16 +59,16 @@
 
 		std::cout << "exiting stat_CLASS_boot4_INSTANTIATE_Output_praise0()" << std::endl;
 	}
-	void CLIBOpenEpiCentre::Output_praise0::stat_REG_boot0_DECLAIRE_Output_praise0()
+	void CLIBOpenEpiCentre::Output_praise0::stat_REG_boot0_DECLARE_Output_praise0()
 	{
-		std::cout << "entered stat_REG_boot0_DECLAIRE_Output_praise0()" << std::endl;
+		std::cout << "entered stat_REG_boot0_DECLARE_Output_praise0()" << std::endl;
 
-		std::cout << "exiting stat_REG_boot0_DECLAIRE_Output_praise0()" << std::endl;
+		std::cout << "exiting stat_REG_boot0_DECLARE_Output_praise0()" << std::endl;
 	}
 // private.
 	void CLIBOpenEpiCentre::Output_praise0::stat_REG_boot1_DEFINE_output_Value()
 	{
-		_REG_ptr_output_praise0_Value = NULL;
+		_REG_ptr_output_praise0_Value = nullptr;
 	}
 	void CLIBOpenEpiCentre::Output_praise0::stat_REG_boot2_SUBSTANTIATE_output_Value()
 	{

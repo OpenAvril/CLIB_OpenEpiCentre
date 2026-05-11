@@ -1,35 +1,37 @@
-
-    CLIBOpenEpiCentre::Input_Control* CLIBOpenEpiCentre::Input::stat_CLASS_ptr_Input_Control;
+#include "engine/Data.h"
+#include "engine/Framework_Server.h"
+#include "engine/Server.h"
+#include "structs/Input.h"
+#include "structs/User_Input.h"
+#include <cstdint>
+#include <iostream>
+#include <list>
     uint8_t* CLIBOpenEpiCentre::Input::_REG_ptr_Input_praiseEventId;
     uint8_t* CLIBOpenEpiCentre::Input::_REG_ptr_Input_playerId;
     std::list<CLIBOpenEpiCentre::Object*>* CLIBOpenEpiCentre::Input::_REG_ptr_List_Of_PraiseInputSubset;
 // public.
-    void CLIBOpenEpiCentre::Input_Control::app_select_And_Set_Input_Subset(CLIBOpenEpiCentre::Framework_Server* obj, uint8_t praiseEventId)
+    void CLIBOpenEpiCentre::Input::app_select_And_Set_Input_Subset(Framework_Server* obj, uint8_t praiseEventId)
     {
-        class CLIBOpenEpiCentre::Input* bufferInputWRITE = obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(obj);
+        Input* bufferInputWRITE = obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(obj);
         switch (praiseEventId)
         {
             case 0:
-                bufferInputWRITE->dyn_REG_set_ptr_Item_Of_ptr_Inputs_Subset(reinterpret_cast<class CLIBOpenEpiCentre::Input_praise0*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Input()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseInputSubsets(praiseEventId)));
+                bufferInputWRITE->dyn_REG_set_ptr_Item_Of_ptr_Inputs_Subset(reinterpret_cast<Input_praise0*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Input()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseInputSubsets(praiseEventId)));
                 break;
 
             case 1:
-                bufferInputWRITE->dyn_REG_set_ptr_Item_Of_ptr_Inputs_Subset(reinterpret_cast<class CLIBOpenEpiCentre::Input_praise1*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Input()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseInputSubsets(praiseEventId)));
+                bufferInputWRITE->dyn_REG_set_ptr_Item_Of_ptr_Inputs_Subset(reinterpret_cast<Input_praise1*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Input()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseInputSubsets(praiseEventId)));
                 break;
 
             case 2:
-                bufferInputWRITE->dyn_REG_set_ptr_Item_Of_ptr_Inputs_Subset(reinterpret_cast<class CLIBOpenEpiCentre::Input_praise2*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Input()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseInputSubsets(praiseEventId)));
+                bufferInputWRITE->dyn_REG_set_ptr_Item_Of_ptr_Inputs_Subset(reinterpret_cast<Input_praise2*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Input()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseInputSubsets(praiseEventId)));
                 break;
 
             case 3:
-                bufferInputWRITE->dyn_REG_set_ptr_Item_Of_ptr_Inputs_Subset(reinterpret_cast<class CLIBOpenEpiCentre::Input_praise3*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Input()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseInputSubsets(praiseEventId)));
+                bufferInputWRITE->dyn_REG_set_ptr_Item_Of_ptr_Inputs_Subset(reinterpret_cast<Input_praise3*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Input()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseInputSubsets(praiseEventId)));
                 break;
 
         }
-    }
-    CLIBOpenEpiCentre::Input_Control* CLIBOpenEpiCentre::Input::dyn_CLASS_get_ptr_Input_Control()
-    {
-        return stat_CLASS_get_ptr_Input_Control();
     }
     void CLIBOpenEpiCentre::Input::dyn_REG_boot1_DEFINE_Input()
     {
@@ -87,25 +89,25 @@
     {
         auto temp = stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset()->begin();
         std::advance(temp, 0);
-        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objInputSubset);
+        *temp = reinterpret_cast<Object*>(objInputSubset);
     }
     void CLIBOpenEpiCentre::Input::dyn_REG_set_ptr_Item_Of_ptr_Inputs_Subset(Input_praise1* objInputSubset)
     {
         auto temp = stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset()->begin();
         std::advance(temp, 0);
-        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objInputSubset);
+        *temp = reinterpret_cast<Object*>(objInputSubset);
     }
     void CLIBOpenEpiCentre::Input::dyn_REG_set_ptr_Item_Of_ptr_Inputs_Subset(Input_praise2* objInputSubset)
     {
         auto temp = stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset()->begin();
         std::advance(temp, 0);
-        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objInputSubset);
+        *temp = reinterpret_cast<Object*>(objInputSubset);
     }
     void CLIBOpenEpiCentre::Input::dyn_REG_set_ptr_Item_Of_ptr_Inputs_Subset(Input_praise3* objInputSubset)
     {
         auto temp = stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset()->begin();
         std::advance(temp, 0);
-        *temp = reinterpret_cast<CLIBOpenEpiCentre::Object*>(objInputSubset);
+        *temp = reinterpret_cast<Object*>(objInputSubset);
     }
 
     void CLIBOpenEpiCentre::Input::stat_CLASS_boot0_DECLARE_Input()
@@ -117,13 +119,13 @@
     void CLIBOpenEpiCentre::Input::stat_CLASS_boot1_DEFINE_Input()
     {
         std::cout << "entered stat_CLASS_boot1_DEFINE_Input()" << std::endl;
-        stat_CLASS_boot1_DEFINE_Input_Control();
+
         std::cout << "exiting stat_CLASS_boot1_DEFINE_Input()" << std::endl;
     }
     void CLIBOpenEpiCentre::Input::stat_CLASS_boot3_INITIALISE_Input()
     {
         std::cout << "entered stat_CLASS_boot3_INITIALISE_Input()" << std::endl;
-        stat_CLASS_boot3_INITIALISE_Input_Control();
+
         std::cout << "exiting stat_CLASS_boot3_INITIALISE_Input()" << std::endl;
     }
     void CLIBOpenEpiCentre::Input::stat_CLASS_boot4_INSTANTIATE_Input()
@@ -139,19 +141,6 @@
         std::cout << "exiting stat_REG_boot0_DECLARE_Input()" << std::endl;
     }
 // private.
-    void CLIBOpenEpiCentre::Input::stat_CLASS_boot1_DEFINE_Input_Control()
-    {
-        stat_CLASS_ptr_Input_Control = nullptr;
-    }
-    void CLIBOpenEpiCentre::Input::stat_CLASS_boot3_INITIALISE_Input_Control()
-    {
-        stat_CLASS_ptr_Input_Control = new class CLIBOpenEpiCentre::Input_Control();
-        while(stat_CLASS_get_ptr_Input_Control() == nullptr) { }
-    }
-    CLIBOpenEpiCentre::Input_Control* CLIBOpenEpiCentre::Input::stat_CLASS_get_ptr_Input_Control()
-    {
-        return stat_CLASS_ptr_Input_Control;
-    }
     void CLIBOpenEpiCentre::Input::stat_REG_boot1_DEFINE_Input_praiseEventId()
     {
         _REG_ptr_Input_praiseEventId = nullptr;
@@ -167,40 +156,40 @@
     void CLIBOpenEpiCentre::Input::stat_REG_boot2_SUBSTANTIATE_Input_praiseEventId()
     {
         _REG_ptr_Input_praiseEventId = new uint8_t();
-        *_REG_ptr_Input_praiseEventId = (uint8_t)(UINT8_MAX);
+        *_REG_ptr_Input_praiseEventId = static_cast<uint8_t>((UINT8_MAX));
     }
     void CLIBOpenEpiCentre::Input::stat_REG_boot2_SUBSTANTIATE_Input_playerId()
     {
         _REG_ptr_Input_playerId = new uint8_t();
-        *_REG_ptr_Input_playerId = (uint8_t)(UINT8_MAX);
+        *_REG_ptr_Input_playerId = static_cast<uint8_t>((UINT8_MAX));
     }
     void CLIBOpenEpiCentre::Input::stat_REG_boot2_SUBSTANTIATE_List_Of_PraiseInputSubset()
     {
-        _REG_ptr_List_Of_PraiseInputSubset = new std::list<class CLIBOpenEpiCentre::Object*>();
+        _REG_ptr_List_Of_PraiseInputSubset = new std::list<Object*>();
         while (stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset() == nullptr) { }
-        stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset()->resize(uint8_t(1));
+        stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset()->resize(1;
         auto temp = stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset()->begin();
-        std::advance(temp, uint8_t(0));
+        std::advance(temp, static_cast<uint8_t>(0));
         *temp = nullptr;
     }
     void CLIBOpenEpiCentre::Input::stat_REG_boot3_INITIALISE_Input_praiseEventId()
     {
-        *_REG_ptr_Input_praiseEventId = (uint8_t)(0);
+        *_REG_ptr_Input_praiseEventId = static_cast<uint8_t>(0);
     }
     void CLIBOpenEpiCentre::Input::stat_REG_boot3_INITIALISE_Input_playerId()
     {
-        *_REG_ptr_Input_playerId = (uint8_t)(0);
+        *_REG_ptr_Input_playerId = static_cast<uint8_t>(0);
     }
-    void CLIBOpenEpiCentre::Input::stat_REG_boot3_INITIALISE_List_Of_PraiseInputSubset(CLIBOpenEpiCentre::Framework_Server* obj, uint8_t praiseId)
+    void CLIBOpenEpiCentre::Input::stat_REG_boot3_INITIALISE_List_Of_PraiseInputSubset(Framework_Server* obj, uint8_t praiseId)
     {
         auto temp = stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset()->begin();
-        std::advance(temp, uint8_t(0));
+        std::advance(temp, static_cast<uint8_t>(0));
         *temp = obj->dyn_STRUCT_get_User_Input()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseInputSubsets(praiseId);
     }
     uint8_t* CLIBOpenEpiCentre::Input::stat_REG_get_ptr_Input_praiseEventId()
-{
-    return _REG_ptr_Input_praiseEventId;
-}
+    {
+        return _REG_ptr_Input_praiseEventId;
+    }
     uint8_t* CLIBOpenEpiCentre::Input::stat_REG_get_ptr_Input_playerId()
     {
         return _REG_ptr_Input_playerId;
