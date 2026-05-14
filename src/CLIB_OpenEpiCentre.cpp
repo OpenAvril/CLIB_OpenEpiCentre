@@ -283,7 +283,7 @@ unsigned char* CLIBOpenEpiCentre::CLIBConcurrentServerIO::io_PRAISE_get_Item_Out
 unsigned char* CLIBOpenEpiCentre::CLIBConcurrentServerIO::io_RPRAISE_get_MetaData_PraiseEventId()
 {
 	if (stat_REG_get_ptr_flag_isMemberFunctionINSTANTIATED()[12] == false) {
-		return Global::stat_CONVERT_uint8_t_to_ByteArray(stat_CLASS_get_ptr_Framework_Server()->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE(stat_CLASS_get_ptr_Framework_Server()));
+		return Global::stat_CONVERT_uint8_t_to_ByteArray(stat_CLASS_get_ptr_Framework_Server()->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE(stat_CLASS_get_ptr_Framework_Server())->dyn_REG_get_ptr_Output_praiseEventId());
 	}
 	else {
 		stat_REG_get_ptr_flag_isMemberFunctionINSTANTIATED()[12] = false;

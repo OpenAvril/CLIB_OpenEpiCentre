@@ -167,7 +167,7 @@
     {
         _REG_ptr_List_Of_PraiseInputSubset = new std::list<Object*>();
         while (stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset() == nullptr) { }
-        stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset()->resize(1;
+        stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset()->resize(1);
         auto temp = stat_REG_get_ptr_Item_Of_ptr_Inputs_Subset()->begin();
         std::advance(temp, static_cast<uint8_t>(0));
         *temp = nullptr;

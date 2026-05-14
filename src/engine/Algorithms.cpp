@@ -87,7 +87,7 @@
     {
         _stat_REG_ptr_list_Of_ptr_Concurrent = new std::list<struct Concurrent*>();
         while (stat_REG_get_ptr_list_Of_ptr_Concurrent() == nullptr) {}
-        stat_REG_get_ptr_list_Of_ptr_Concurrent()->resize(uint8_t(3));//NUMBER OF CONCURRENT THREADS.
+        stat_REG_get_ptr_list_Of_ptr_Concurrent()->resize(static_cast<uint8_t>(3));//NUMBER OF CONCURRENT THREADS.
         for (uint8_t concurrentThreadId = 0; concurrentThreadId < sizeof(*stat_REG_get_ptr_list_Of_ptr_Concurrent()); concurrentThreadId++)
         {
             auto temp = stat_REG_get_ptr_list_Of_ptr_Concurrent()->begin();

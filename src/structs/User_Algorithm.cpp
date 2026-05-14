@@ -1,43 +1,26 @@
 #include "structs/User_Algorithm.h"
-#include <cstdint>
 #include <iostream>
-#include "structs/praise_sets/Algorithm_praise0.h"
-#include "structs/praise_sets/Algorithm_praise1.h"
-#include "structs/praise_sets/Algorithm_praise2.h"
-#include "structs/praise_sets/Algorithm_praise3.h"
 	CLIBOpenEpiCentre::Algorithm_praise0* CLIBOpenEpiCentre::User_Algorithm::_stat_CLASS_ptr_Algorithm_praise0;
 	CLIBOpenEpiCentre::Algorithm_praise1* CLIBOpenEpiCentre::User_Algorithm::_stat_CLASS_ptr_Algorithm_praise1;
 	CLIBOpenEpiCentre::Algorithm_praise2* CLIBOpenEpiCentre::User_Algorithm::_stat_CLASS_ptr_Algorithm_praise2;
 	CLIBOpenEpiCentre::Algorithm_praise3* CLIBOpenEpiCentre::User_Algorithm::_stat_CLASS_ptr_Algorithm_praise3;
 // public.
-	CLIBOpenEpiCentre::Object* CLIBOpenEpiCentre::User_Algorithm::dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseId)
+	CLIBOpenEpiCentre::Algorithm_praise0* CLIBOpenEpiCentre::User_Algorithm::dyn_CLASS_get_ptr_Algorithm_praise0()
 	{
-		switch (praiseId)
-		{
-		case 0:
-			return reinterpret_cast<Object *>(stat_CLASS_get_ptr_Algorithm_praise0());
-			break;
-
-		case 1:
-			return reinterpret_cast<Object *>(stat_CLASS_get_ptr_Algorithm_praise1());
-			break;
-
-		case 2:
-			return reinterpret_cast<Object *>(stat_CLASS_get_ptr_Algorithm_praise2());
-			break;
-
-		case 3:
-			return reinterpret_cast<Object *>(stat_CLASS_get_ptr_Algorithm_praise3());
-			break;
-			
-		default: 
-			return 0;
-			break;
-		}
-		
+		return stat_CLASS_get_ptr_Algorithm_praise0();
 	}
-	dyn_CLASS_get_ptr_Algorithm_praise0();
-
+	CLIBOpenEpiCentre::Algorithm_praise1* CLIBOpenEpiCentre::User_Algorithm::dyn_CLASS_get_ptr_Algorithm_praise1()
+	{
+		return stat_CLASS_get_ptr_Algorithm_praise1();
+	}
+	CLIBOpenEpiCentre::Algorithm_praise2* CLIBOpenEpiCentre::User_Algorithm::dyn_CLASS_get_ptr_Algorithm_praise2()
+	{
+		return stat_CLASS_get_ptr_Algorithm_praise2();
+	}
+	CLIBOpenEpiCentre::Algorithm_praise3* CLIBOpenEpiCentre::User_Algorithm::dyn_CLASS_get_ptr_Algorithm_praise3()
+	{
+		return stat_CLASS_get_ptr_Algorithm_praise3();
+	}
 	void CLIBOpenEpiCentre::User_Algorithm::dyn_REG_boot1_DEFINE_User_Algorithm()
 	{
 		std::cout << "entered dyn_REG_boot1_DEFINE_User_Algorithm()" << std::endl;

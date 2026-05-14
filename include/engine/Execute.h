@@ -38,8 +38,8 @@ namespace CLIBOpenEpiCentre
         static void stat_PGM_boot1_DEFINE_ServerInputAction();
         static void stat_PGM_boot1_DEFINE_ServerOutputReceive();
         static void stat_PGM_boot3_INITIALISE_ConcurrentQue_Server();
-        static void stat_PGM_boot3_INITIALISE_ServerInputAction();
-        static void stat_PGM_boot3_INITIALISE_ServerOutputReceive();
+        static void stat_PGM_boot3_INITIALISE_SERVERINPUTRECEIVE();
+        static void stat_PGM_boot3_INITIALISE_SERVEROUTPUTSEND();
         static void* stat_PGM_get_ptr_ConcurrentQue_Server();
         static void* stat_PGM_get_ptr_WriteEnable_ServerInputAction();
         static void* stat_PGM_get_ptr_WriteEnable_ServerOutputReceive();

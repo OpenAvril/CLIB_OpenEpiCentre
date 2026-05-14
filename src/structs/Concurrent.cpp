@@ -9,14 +9,6 @@
 #include "structs/praise_sets/Algorithm_praise1.h"
 #include "structs/praise_sets/Algorithm_praise2.h"
 #include "structs/praise_sets/Algorithm_praise3.h"
-#include "structs/praise_sets/Input_praise0.h"
-#include "structs/praise_sets/Input_praise1.h"
-#include "structs/praise_sets/Input_praise2.h"
-#include "structs/praise_sets/Input_praise3.h"
-#include "structs/praise_sets/Output_praise0.h"
-#include "structs/praise_sets/Output_praise1.h"
-#include "structs/praise_sets/Output_praise2.h"
-#include "structs/praise_sets/Output_praise3.h"
 #include <cstdint>
 #include <iostream>
 #include "engine/Data.h"
@@ -28,28 +20,29 @@
     {
         switch (praiseEventId)
         {
-        case static_cast<uint8_t>(0):
-			Algorithm_praise0* _stat_STRUCT_Algorithm_praise0_Subset = obj.dyn_STRUCT_get_User_Algorithm()->dyn_CLASS_get_ptr_Algorithm_praise0();
+        case 0: {
+            Algorithm_praise0* _stat_STRUCT_Algorithm_praise0_Subset = obj.dyn_STRUCT_get_User_Algorithm()->dyn_CLASS_get_ptr_Algorithm_praise0();
             _stat_STRUCT_Algorithm_praise0_Subset->app_Do_Praise(reinterpret_cast<Input_praise0*>(ptr_Input_Subset), reinterpret_cast<Output_praise0*>(ptr_Output_Subset));
             break;
-
-        case static_cast<uint8_t>(1):
+        }
+        case 1: {
             Algorithm_praise1* _stat_STRUCT_Algorithm_praise1_Subset = obj.dyn_STRUCT_get_User_Algorithm()->dyn_CLASS_get_ptr_Algorithm_praise1();
             _stat_STRUCT_Algorithm_praise1_Subset->app_Do_Praise(reinterpret_cast<Input_praise1*>(ptr_Input_Subset), reinterpret_cast<Output_praise1*>(ptr_Output_Subset));
             break;
-
-        case static_cast<uint8_t>(2):
+        }
+        case 2: {
             Algorithm_praise2* _stat_STRUCT_Algorithm_praise2_Subset = obj.dyn_STRUCT_get_User_Algorithm()->dyn_CLASS_get_ptr_Algorithm_praise2();
             _stat_STRUCT_Algorithm_praise2_Subset->app_Do_Praise(reinterpret_cast<Input_praise2*>(ptr_Input_Subset), reinterpret_cast<Output_praise2*>(ptr_Output_Subset));
             break;
-
-        case static_cast<uint8_t>(3):
+        }
+        case 3: {
             Algorithm_praise3* _stat_STRUCT_Algorithm_praise3_Subset = obj.dyn_STRUCT_get_User_Algorithm()->dyn_CLASS_get_ptr_Algorithm_praise3();
             _stat_STRUCT_Algorithm_praise3_Subset->app_Do_Praise(reinterpret_cast<Input_praise3*>(ptr_Input_Subset), reinterpret_cast<Output_praise3*>(ptr_Output_Subset));
             break;
-
-        default:
+        }
+        default: {
             break;
+        }
         }
     }
     void CLIBOpenEpiCentre::Concurrent::dyn_REG_boot1_DEFINE_Concurrent()

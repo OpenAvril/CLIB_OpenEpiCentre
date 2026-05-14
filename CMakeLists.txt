@@ -9,6 +9,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_library(CLIB_OpenEpiCentre SHARED
         include/CLIB_OpenEpiCentre.h
         src/CLIB_OpenEpiCentre.cpp
+        include/engine/Framework_Server.h
+        src/engine/Framework_Server.cpp
+        include/engine/Global.h
+        src/engine/Global.cpp
         include/structs/Input.h
         src/structs/Input.cpp
         include/structs/Output.h
@@ -27,10 +31,6 @@ add_library(CLIB_OpenEpiCentre SHARED
         src/structs/praise_sets/Input_praise0.cpp
         include/structs/praise_sets/Output_praise0.h
         src/structs/praise_sets/Output_praise0.cpp
-        include/engine/Framework_Server.h
-        src/engine/Framework_Server.cpp
-        include/engine/Global.h
-        src/engine/Global.cpp
         include/engine/Server.h
         src/engine/Server.cpp
         include/engine/Algorithms.h
@@ -42,16 +42,16 @@ add_library(CLIB_OpenEpiCentre SHARED
         src/engine/Execute.cpp
         include/engine/Execute_Control.h
         src/engine/Execute_Control.cpp
-        include/CLIB_WriteQueForThreadsAt_SERVERINPUTRECIEVE/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE.h
-        include/CLIB_WriteQueForThreadsAt_SERVERINPUTRECIEVE/WriteEnableForThreadsAt_SERVERINPUTRECEIVE_Framework.h
-        include/CLIB_WriteQueForThreadsAt_SERVERINPUTRECIEVE/WriteEnableForThreadsAt_SERVERINPUTRECEIVE_Global.h
-        include/CLIB_WriteQueForThreadsAt_SERVERINPUTRECIEVE/WriteEnableForThreadsAt_SERVERINPUTRECEIVE.h
-        include/CLIB_WriteQueForThreadsAt_SERVERINPUTRECIEVE/WriteEnableForThreadsAt_SERVERINPUTRECEIVE_Control.h
-        include/CLIB_WriteQueForThreadsAt_SERVEROUTPUTSEND/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND.h
-        include/CLIB_WriteQueForThreadsAt_SERVEROUTPUTSEND/WriteEnableForThreadsAt_SERVEROUTPUTSEND_Framework.h
-        include/CLIB_WriteQueForThreadsAt_SERVEROUTPUTSEND/WriteEnableForThreadsAt_SERVEROUTPUTSEND_Global.h
-        include/CLIB_WriteQueForThreadsAt_SERVEROUTPUTSEND/WriteEnableForThreadsAt_SERVEROUTPUTSEND.h
-        include/CLIB_WriteQueForThreadsAt_SERVEROUTPUTSEND/WriteEnableForThreadsAt_SERVEROUTPUTSEND_Control.h
+        include/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE.h
+        include/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE/WriteEnableForThreadsAt_SERVERINPUTRECEIVE_Framework.h
+        include/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE/WriteEnableForThreadsAt_SERVERINPUTRECEIVE_Global.h
+        include/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE/WriteEnableForThreadsAt_SERVERINPUTRECEIVE.h
+        include/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE/WriteEnableForThreadsAt_SERVERINPUTRECEIVE_Control.h
+        include/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND.h
+        include/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND/WriteEnableForThreadsAt_SERVEROUTPUTSEND_Framework.h
+        include/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND/WriteEnableForThreadsAt_SERVEROUTPUTSEND_Global.h
+        include/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND/WriteEnableForThreadsAt_SERVEROUTPUTSEND.h
+        include/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND/WriteEnableForThreadsAt_SERVEROUTPUTSEND_Control.h
         include/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER.h
         include/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER/LaunchEnableForConcurrentThreadsAt_SERVER_Framework.h
         include/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER/LaunchEnableForConcurrentThreadsAt_SERVER_Global.h
@@ -60,17 +60,17 @@ add_library(CLIB_OpenEpiCentre SHARED
 )
 target_include_directories(CLIB_OpenEpiCentre PUBLIC include)
 
-add_library(CLIB_WriteQueForThreadsAt_SERVERINPUTRECIEVE SHARED IMPORTED)
-set_property(TARGET CLIB_WriteQueForThreadsAt_SERVERINPUTRECIEVE PROPERTY
-        IMPORTED_LOCATION "CLIB_WriteQueForThreadsAt_SERVERINPUTRECIEVE.so")
-target_link_libraries(CLIB_OpenEpiCentre PRIVATE CLIB_WriteQueForThreadsAt_SERVERINPUTRECIEVE)
+add_library(CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE SHARED IMPORTED)
+set_property(TARGET CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE PROPERTY
+        IMPORTED_LOCATION "/libs/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE.so")
+target_link_libraries(CLIB_OpenEpiCentre PRIVATE CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE)
 
-add_library(CLIB_WriteQueForThreadsAt_SERVEROUTPUTSEND SHARED IMPORTED)
-set_property(TARGET CLIB_WriteQueForThreadsAt_SERVEROUTPUTSEND PROPERTY
-        IMPORTED_LOCATION "CLIB_WriteQueForThreadsAt_SERVEROUTPUTSEND.so")
-target_link_libraries(CLIB_OpenEpiCentre PRIVATE CLIB_WriteQueForThreadsAt_SERVEROUTPUTSEND)
+add_library(CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND SHARED IMPORTED)
+set_property(TARGET CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND PROPERTY
+        IMPORTED_LOCATION "/libs/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND.so")
+target_link_libraries(CLIB_OpenEpiCentre PRIVATE CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND)
 
 add_library(CLIB_LaunchEnableForConcurrentThreadsAt_SERVER SHARED IMPORTED)
 set_property(TARGET CLIB_LaunchEnableForConcurrentThreadsAt_SERVER PROPERTY
-        IMPORTED_LOCATION "CLIB_LaunchEnableForConcurrentThreadsAt_SERVER.so")
+        IMPORTED_LOCATION "/libs/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER.so")
 target_link_libraries(CLIB_OpenEpiCentre PRIVATE CLIB_LaunchEnableForConcurrentThreadsAt_SERVER)

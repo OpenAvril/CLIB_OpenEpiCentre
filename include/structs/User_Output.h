@@ -28,9 +28,9 @@ namespace CLIBOpenEpiCentre
 		static void stat_CLASS_boot3_INITIALISE_Output_praise1();
 		static void stat_CLASS_boot3_INITIALISE_Output_praise2();
 		static void stat_CLASS_boot3_INITIALISE_Output_praise3();
-		static struct Output_praise0* stat_CLASS_get_ptr_Output_praise0();
-		static struct Output_praise1* stat_CLASS_get_ptr_Output_praise1();
-		static struct Output_praise2* stat_CLASS_get_ptr_Output_praise2();
-		static struct Output_praise3* stat_CLASS_get_ptr_Output_praise3();
+		static Output_praise0* stat_CLASS_get_ptr_Output_praise0();
+		static Output_praise1* stat_CLASS_get_ptr_Output_praise1();
+		static Output_praise2* stat_CLASS_get_ptr_Output_praise2();
+		static Output_praise3* stat_CLASS_get_ptr_Output_praise3();
 	};
 }

@@ -1,3 +1,6 @@
+#include "CLIB_LaunchEnableForConcurrentThreadsAt_SERVER/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER.h"
+#include "CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND.h"
+#include "CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE.h"
 #include "engine/Algorithms.h"
 #include "engine/Execute.h"
 #include "engine/Execute_Control.h"
@@ -86,49 +89,47 @@
         std::cout << "entered stat_CLASS_boot3_INITIALISE_Execute()" << std::endl;
         stat_CLASS_boot3_INITIALISE_Execute_Control();
         stat_PGM_boot3_INITIALISE_ConcurrentQue_Server();
-        stat_PGM_boot3_INITIALISE_ServerInputAction();
-        stat_PGM_boot3_INITIALISE_ServerOutputReceive();
+        stat_PGM_boot3_INITIALISE_SERVERINPUTRECEIVE();
+        stat_PGM_boot3_INITIALISE_SERVEROUTPUTSEND();
         std::cout << "exiting stat_CLASS_boot3_INITIALISE_Execute()" << std::endl;
     }
     void CLIBOpenEpiCentre::Execute::stat_CLASS_boot4_INSTANTIATE_Execute()
     {
-        std::cout << "entered stat_CLASS_boot4_INSTANTIATE_Execute()" << std::endl;
-
+    std::cout << "entered stat_CLASS_boot4_INSTANTIATE_Execute()" << std::endl;
         unsigned char* bytes_uint8_t = CLIBOpenEpiCentre::Global::stat_CONVERT_uint8_t_to_ByteArray(UINT8_MAX);
 
-        std::cout << "entered CHECK memeber function of CLIBLaunchEnableForConcurrentThreadsAtSERVER() " << std::endl;
-        //OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_FUNCT_generate_Program();
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_FUNCT_get_flag_isPGM_INSTNATIATED();
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_FUNCT_request_Wait_launch(bytes_uint8_t);
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_FUNCT_terminate_Progaram();
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_FUNCT_thread_End(bytes_uint8_t);
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_REG_get_coreId_To_launch();
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_REG_get_Flag_Active();
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_REG_get_Flag_ConcurrentCoreState(bytes_uint8_t);
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_REG_get_Flag_Idle();
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_REG_get_State_launchBit();
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_REG_get_Flag_ConcurrentCoreState(bytes_uint8_t);
-        std::cout << "done CHECK memeber function of CLIBLaunchEnableForConcurrentThreadsAtSERVER() " << std::endl;
+       std::cout << "entered CHECK member function of CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE() " << std::endl;
+        //CLIBWriteQueAtSERVERINPUTRECEIVE::CLIBWriteEnableForThreadsAtSERVERINPUTReceive::app_FUNCT_generate_Program();
+        CLIBWriteQueAtSERVERINPUTRECEIVE::CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE::app_FUNCT_get_flag_isPGM_INSTANTIATED();
+        CLIBWriteQueAtSERVERINPUTRECEIVE::CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE::app_FUNCT_terminate_Program();
+        CLIBWriteQueAtSERVERINPUTRECEIVE::CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE::app_FUNCT_write_End(bytes_uint8_t);
+        CLIBWriteQueAtSERVERINPUTRECEIVE::CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE::app_FUNCT_write_Start(bytes_uint8_t);
+        std::cout << "done CHECK member function of CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE() " << std::endl;
 
-        std::cout << "entered CHECK memeber function of CLIBWriteEnableForThreadsAtSERVERINPUTReceive() " << std::endl;
-        //OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTReceive::CLIBWriteEnableForThreadsAtSERVERINPUTReceive::app_FUNCT_generate_Program();
-        OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTReceive::CLIBWriteEnableForThreadsAtSERVERINPUTReceive::app_FUNCT_get_flag_isPGM_INSTNATIATED();
-        OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTReceive::CLIBWriteEnableForThreadsAtSERVERINPUTReceive::app_FUNCT_terminate_Program();
-        OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTReceive::CLIBWriteEnableForThreadsAtSERVERINPUTReceive::app_FUNCT_write_End(bytes_uint8_t);
-        OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTReceive::CLIBWriteEnableForThreadsAtSERVERINPUTReceive::app_FUNCT_write_Start(bytes_uint8_t);
-        std::cout << "done CHECK memeber function of CLIBWriteEnableForThreadsAtSERVERINPUTReceive() " << std::endl;
+        std::cout << "entered CHECK member function of CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND() " << std::endl;
+        //CLIBWriteQueAtSERVEROUTPUTSEND::CLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::app_FUNCT_generate_Program();
+        CLIBWriteQueAtSERVEROUTPUTSEND::CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND::app_FUNCT_get_flag_isPGM_INSTANTIATED();
+        CLIBWriteQueAtSERVEROUTPUTSEND::CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND::app_FUNCT_terminate_Program();
+        CLIBWriteQueAtSERVEROUTPUTSEND::CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND::app_FUNCT_write_End(bytes_uint8_t);
+        CLIBWriteQueAtSERVEROUTPUTSEND::CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND::app_FUNCT_write_Start(bytes_uint8_t);
+        std::cout << "done CHECK member function of CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND() " << std::endl;
 
-        std::cout << "entered CHECK memeber function of CLIBWriteEnableForThreadsAtSERVEROUTPUTSEND() " << std::endl;
-        //OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::CLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::app_FUNCT_generate_Program();
-        OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::CLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::app_FUNCT_get_flag_isPGM_INSTNATIATED();
-        OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::CLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::app_FUNCT_terminate_Program();
-        OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::CLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::app_FUNCT_write_End(bytes_uint8_t);
-        OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::CLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::app_FUNCT_write_Start(bytes_uint8_t);
-        std::cout << "done CHECK memeber function of CLIBWriteEnableForThreadsAtSERVEROUTPUTSEND() " << std::endl;
+        std::cout << "entered CHECK member function of CLIBLaunchEnableForConcurrentThreadsAtSERVER() " << std::endl;
+        //CLIBLaunchQueAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_FUNCT_generate_Program();
+        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_get_flag_isPGM_INSTANTIATED();
+        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_request_Wait_launch(bytes_uint8_t);
+        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_terminate_Progaram();
+        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_thread_End(bytes_uint8_t);
+        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_coreId_To_launch();
+        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_Flag_Active();
+        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_Flag_ConcurrentCoreState(bytes_uint8_t);
+        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_Flag_Idle();
+        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_State_launchBit();
+        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_Flag_ConcurrentCoreState(bytes_uint8_t);
+        std::cout << "done CHECK member function of CLIBLaunchEnableForConcurrentThreadsAtSERVER() " << std::endl;
 
         delete bytes_uint8_t;
-
-        std::cout << "exiting stat_CLASS_boot4_INSTANTIATE_Execute()" << std::endl;
+    std::cout << "exiting stat_CLASS_boot4_INSTANTIATE_Execute()" << std::endl;
     }
     void CLIBOpenEpiCentre::Execute::stat_REG_boot0_DECLARE_Execute()
     {
@@ -191,17 +192,17 @@
     }
     void CLIBOpenEpiCentre::Execute::stat_PGM_boot3_INITIALISE_ConcurrentQue_Server()
     {
-        _stat_PGM_ConcurrentQue_Server = OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_FUNCT_generate_Program();
+        _stat_PGM_ConcurrentQue_Server = CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_generate_Program();
         while (stat_PGM_get_ptr_ConcurrentQue_Server() == nullptr) {}
     }
-    void CLIBOpenEpiCentre::Execute::stat_PGM_boot3_INITIALISE_ServerInputAction()
+    void CLIBOpenEpiCentre::Execute::stat_PGM_boot3_INITIALISE_SERVERINPUTRECEIVE()
     {
-        _stat_PGM_WriteEnable_ServerInputAction = OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTReceive::CLIBWriteEnableForThreadsAtSERVERINPUTReceive::app_FUNCT_generate_Program();
+        _stat_PGM_WriteEnable_ServerInputAction = CLIBWriteQueAtSERVERINPUTRECEIVE::CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE::app_FUNCT_generate_Program();
         while (stat_PGM_get_ptr_WriteEnable_ServerInputAction() == nullptr) {}
     }
-    void CLIBOpenEpiCentre::Execute::stat_PGM_boot3_INITIALISE_ServerOutputReceive()
+    void CLIBOpenEpiCentre::Execute::stat_PGM_boot3_INITIALISE_SERVEROUTPUTSEND()
     {
-        _stat_PGM_WriteEnable_ServerOutputReceive = OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::CLIBWriteEnableForThreadsAtSERVEROUTPUTSEND::app_FUNCT_generate_Program();
+        _stat_PGM_WriteEnable_ServerOutputReceive = CLIBWriteQueAtSERVEROUTPUTSEND::CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND::app_FUNCT_generate_Program();
         while (stat_PGM_get_ptr_WriteEnable_ServerOutputReceive() == nullptr) {}
     }
     void* CLIBOpenEpiCentre::Execute::stat_PGM_get_ptr_ConcurrentQue_Server()

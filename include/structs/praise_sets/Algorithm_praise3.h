@@ -1,10 +1,10 @@
 #pragma once
 namespace CLIBOpenEpiCentre
 {
-	struct Algorithm_praise0
+	struct Algorithm_praise3
 	{
 	public:
-		void app_Do_Praise(class Input_praise0* ptr_In_SubSet, class Output_praise0* ptr_Out_SubSet);
+		void app_Do_Praise(class Input_praise3* ptr_In_SubSet, class Output_praise3* ptr_Out_SubSet);
 	private:
 
 	};
