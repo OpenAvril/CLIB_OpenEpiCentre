@@ -56,27 +56,24 @@ add_library(CLIB_OpenEpiCentre SHARED
         include/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER/LaunchEnableForConcurrentThreadsAt_SERVER.h
         include/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER/LaunchEnableForConcurrentThreadsAt_SERVER_Control.h
 )
-find_library(${CMAKE_CURRENT_SOURCE_DIR}/libs/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE
-        NAMES CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE
+
+add_library(CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE SHARED IMPORTED)
+add_library(CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND SHARED IMPORTED)
+add_library(CLIB_LaunchEnableForConcurrentThreadsAt_SERVER SHARED IMPORTED)
+
+set_target_properties(CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE PROPERTIES
+        IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/libs/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE.so"
+        INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/include/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE"
 )
-target_link_libraries(CLIB_OpenEpiCentre PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/libs/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE
+set_target_properties(CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND PROPERTIES
+        IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/libs/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND.so"
+        INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/include/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND"
+)
+set_target_properties(CLIB_LaunchEnableForConcurrentThreadsAt_SERVER PROPERTIES
+        IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/libs/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER.so"
+        INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/include/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER"
 )
 
-find_library(${CMAKE_CURRENT_SOURCE_DIR}/libs/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND
-        NAMES CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND          # Name without 'libs' or '.so'
-)
-target_link_libraries(CLIB_OpenEpiCentre PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/libs/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND
-)
-
-find_library(${CMAKE_CURRENT_SOURCE_DIR}/libs/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER
-        NAMES CLIB_LaunchEnableForConcurrentThreadsAt_SERVER          # Name without 'libs' or '.so'
-)
-target_link_libraries(CLIB_OpenEpiCentre PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/libs/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER
-)
-
-set_target_properties(${PROJECT_NAME} PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY ./libs
-)
+target_link_libraries(CLIB_OpenEpiCentre PRIVATE CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE)
+target_link_libraries(CLIB_OpenEpiCentre PRIVATE CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND)
+target_link_libraries(CLIB_OpenEpiCentre PRIVATE CLIB_LaunchEnableForConcurrentThreadsAt_SERVER)
