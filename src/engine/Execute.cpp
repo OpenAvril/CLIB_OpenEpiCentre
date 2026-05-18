@@ -1,13 +1,13 @@
-#include "CLIB_LaunchEnableForConcurrentThreadsAt_SERVER/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER.h"
-#include "CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND.h"
-#include "CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE.h"
-#include "engine/Algorithms.h"
-#include "engine/Execute.h"
-#include "engine/Execute_Control.h"
-#include "engine/Framework_Server.h"
-#include "engine/Global.h"
-#include "engine/Server.h"
-#include "structs/Concurrent.h"
+#include "../../include/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER.h"
+#include "../../include/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND.h"
+#include "../../include/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE.h"
+#include "../../include/engine/Algorithms.h"
+#include "../../include/engine/Execute.h"
+#include "../../include/engine/Execute_Control.h"
+#include "../../include/engine/Framework_Server.h"
+#include "../../include/engine/Global.h"
+#include "../../include/engine/Server.h"
+#include "../../include/structs/Concurrent.h"
 #include <iostream>
     CLIBOpenEpiCentre::Execute_Control* CLIBOpenEpiCentre::Execute::_stat_CLASS_ptr_Execute_Control;
     std::list<std::thread*>* CLIBOpenEpiCentre::Execute::_stat_REG_List_Of_Threads;
@@ -119,7 +119,7 @@
         CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_get_flag_isPGM_INSTANTIATED();
         CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_request_Wait_launch(bytes_uint8_t);
         CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_terminate_Progaram();
-        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_thread_End(bytes_uint8_t);
+        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_thread_SERVER(bytes_uint8_t);//todo rename
         CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_coreId_To_launch();
         CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_Flag_Active();
         CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_Flag_ConcurrentCoreState(bytes_uint8_t);

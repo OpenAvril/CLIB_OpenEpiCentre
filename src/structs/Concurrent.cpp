@@ -1,24 +1,24 @@
-#include "CLIB_LaunchEnableForConcurrentThreadsAt_SERVER/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER.h"
-#include "CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND.h"
-#include "CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE.h"
-#include "engine/Algorithms.h"
-#include "engine/Framework_Server.h"
-#include "engine/Server.h"
-#include "structs/Concurrent.h"
-#include "structs/Input.h"
-#include "structs/Output.h"
-#include "structs/User_Algorithm.h"
-#include "structs/praise_sets/Algorithm_praise0.h"
-#include "structs/praise_sets/Algorithm_praise1.h"
-#include "structs/praise_sets/Algorithm_praise2.h"
-#include "structs/praise_sets/Algorithm_praise3.h"
+#include "../../include/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER/CLIB_LaunchEnableForConcurrentThreadsAt_SERVER.h"
+#include "../../include/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND/CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND.h"
+#include "../../include/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE/CLIB_WriteEnableForThreadsAt_SERVERINPUTRECEIVE.h"
+#include "../../include/engine/Algorithms.h"
+#include "../../include/engine/Data.h"
+#include "../../include/engine/Data_Control.h"
+#include "../../include/engine/Execute.h"
+#include "../../include/engine/Execute_Control.h"
+#include "../../include/engine/Framework_Server.h"
+#include "../../include/engine/Global.h"
+#include "../../include/engine/Server.h"
+#include "../../include/structs/Concurrent.h"
+#include "../../include/structs/Input.h"
+#include "../../include/structs/Output.h"
+#include "../../include/structs/User_Algorithm.h"
+#include "../../include/structs/praise_sets/Algorithm_praise0.h"
+#include "../../include/structs/praise_sets/Algorithm_praise1.h"
+#include "../../include/structs/praise_sets/Algorithm_praise2.h"
+#include "../../include/structs/praise_sets/Algorithm_praise3.h"
 #include <cstdint>
 #include <iostream>
-#include "engine/Data.h"
-#include "engine/Data_Control.h"
-#include "engine/Execute.h"
-#include "engine/Execute_Control.h"
-#include "engine/Global.h"
 // public.
     void CLIBOpenEpiCentre::Concurrent::app_do_Concurrent_Algorithm_For_PraiseEventId(Framework_Server obj, uint8_t playerId, uint8_t praiseEventId, Object* ptr_Input_Subset, Object* ptr_Output_Subset)
     {
@@ -113,7 +113,7 @@
                         );
                         CLIBWriteQueAtSERVEROUTPUTSEND::CLIB_WriteEnableForThreadsAt_SERVEROUTPUTSEND::app_FUNCT_write_Start(CLIBOpenEpiCentre::Global::stat_CONVERT_uint8_t_to_ByteArray(static_cast<uint8_t>(concurrent_threadID + static_cast<uint8_t>(1))));
                         obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_push_To_STACK_Of_Output(obj, concurrent_threadID);
-                        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_thread_End(CLIBOpenEpiCentre::Global::stat_CONVERT_uint8_t_to_ByteArray(concurrent_threadID));
+                        CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_FUNCT_thread_SERVER(CLIBOpenEpiCentre::Global::stat_CONVERT_uint8_t_to_ByteArray(concurrent_threadID));//todo change to END
                         if (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_get_Item_flag_isLoaded_Stack_OutputSend() == true)
                         {
                             if (CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_Flag_ConcurrentCoreState(CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_coreId_To_launch()) == CLIBLaunchQueAtSERVER::CLIB_LaunchEnableForConcurrentThreadsAt_SERVER::app_REG_get_Flag_Idle())

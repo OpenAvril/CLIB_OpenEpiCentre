@@ -1,4 +1,4 @@
-#include "structs/User_Algorithm.h"
+#include "../../include/structs/User_Algorithm.h"
 #include <iostream>
 	CLIBOpenEpiCentre::Algorithm_praise0* CLIBOpenEpiCentre::User_Algorithm::_stat_CLASS_ptr_Algorithm_praise0;
 	CLIBOpenEpiCentre::Algorithm_praise1* CLIBOpenEpiCentre::User_Algorithm::_stat_CLASS_ptr_Algorithm_praise1;

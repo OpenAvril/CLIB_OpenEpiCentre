@@ -1,7 +1,7 @@
-#include "engine/Algorithms.h"
-#include "engine/Data.h"
-#include "engine/Execute.h"
-#include "engine/Server.h"
+#include "../../include/engine/Algorithms.h"
+#include "../../include/engine/Data.h"
+#include "../../include/engine/Execute.h"
+#include "../../include/engine/Server.h"
 #include <iostream>
     CLIBOpenEpiCentre::Algorithms* CLIBOpenEpiCentre::Server::_stat_CLASS_ptr_Algorithms;
     CLIBOpenEpiCentre::Data* CLIBOpenEpiCentre::Server::_stat_CLASS_ptr_Data;

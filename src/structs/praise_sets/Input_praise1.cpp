@@ -1,4 +1,4 @@
-#include "structs/praise_sets/Input_praise1.h"
+#include "../../../include/structs/praise_sets/Input_praise1.h"
 #include <cfloat>
 #include <iostream>
 	float* CLIBOpenEpiCentre::Input_praise1::_stat_REG_ptr_Input_praise1_valueA;

@@ -1,6 +1,5 @@
-
-#include "engine/Algorithms.h"
-#include "structs/Concurrent.h"
+#include "../../include/engine/Algorithms.h"
+#include "../../include/structs/Concurrent.h"
 #include <iostream>
 #include <list>
     std::list<CLIBOpenEpiCentre::Concurrent*>* CLIBOpenEpiCentre::Algorithms::_stat_REG_ptr_list_Of_ptr_Concurrent;

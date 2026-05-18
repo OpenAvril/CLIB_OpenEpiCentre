@@ -1,4 +1,4 @@
-#include "structs/praise_sets/Output_praise2.h"
+#include "../../../include/structs/praise_sets/Output_praise2.h"
 #include <cfloat>
 #include <iostream>
 double* CLIBOpenEpiCentre::Output_praise2::_REG_ptr_output_praise2_Value = nullptr;

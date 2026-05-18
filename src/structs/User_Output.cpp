@@ -1,10 +1,10 @@
-#include "structs/User_Output.h"
+#include "../../include/structs/praise_sets/Output_praise0.h"
+#include "../../include/structs/praise_sets/Output_praise1.h"
+#include "../../include/structs/praise_sets/Output_praise2.h"
+#include "../../include/structs/praise_sets/Output_praise3.h"
+#include "../../include/structs/User_Output.h"
 #include <cstdint>
 #include <iostream>
-#include "structs/praise_sets/Output_praise0.h"
-#include "structs/praise_sets/Output_praise1.h"
-#include "structs/praise_sets/Output_praise2.h"
-#include "structs/praise_sets/Output_praise3.h"
 	CLIBOpenEpiCentre::Output_praise0* CLIBOpenEpiCentre::User_Output::_stat_CLASS_ptr_Output_praise0;
 	CLIBOpenEpiCentre::Output_praise1* CLIBOpenEpiCentre::User_Output::_stat_CLASS_ptr_Output_praise1;
 	CLIBOpenEpiCentre::Output_praise2* CLIBOpenEpiCentre::User_Output::_stat_CLASS_ptr_Output_praise2;

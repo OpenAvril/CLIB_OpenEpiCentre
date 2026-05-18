@@ -1,10 +1,10 @@
-#include "structs/User_Input.h"
+#include "../../include/structs/praise_sets/Input_praise0.h"
+#include "../../include/structs/praise_sets/Input_praise1.h"
+#include "../../include/structs/praise_sets/Input_praise2.h"
+#include "../../include/structs/praise_sets/Input_praise3.h"
+#include "../../include/structs/User_Input.h"
 #include <cstdint>
 #include <iostream>
-#include "structs/praise_sets/Input_praise0.h"
-#include "structs/praise_sets/Input_praise1.h"
-#include "structs/praise_sets/Input_praise2.h"
-#include "structs/praise_sets/Input_praise3.h"
 	CLIBOpenEpiCentre::Input_praise0* CLIBOpenEpiCentre::User_Input::_stat_CLASS_ptr_Input_praise0;
 	CLIBOpenEpiCentre::Input_praise1* CLIBOpenEpiCentre::User_Input::_stat_CLASS_ptr_Input_praise1;
 	CLIBOpenEpiCentre::Input_praise2* CLIBOpenEpiCentre::User_Input::_stat_CLASS_ptr_Input_praise2;

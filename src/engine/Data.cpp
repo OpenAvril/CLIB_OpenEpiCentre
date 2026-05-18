@@ -1,13 +1,13 @@
 
-#include "engine/Data.h"
-#include "engine/Data_Control.h"
-#include "engine/Framework_Server.h"
-#include "engine/Global.h"
-#include "engine/Server.h"
-#include "structs/Input.h"
-#include "structs/Output.h"
-#include "structs/User_Input.h"
-#include "structs/User_Output.h"
+#include "../../include/engine/Data.h"
+#include "../../include/engine/Data_Control.h"
+#include "../../include/engine/Framework_Server.h"
+#include "../../include/engine/Global.h"
+#include "../../include/engine/Server.h"
+#include "../../include/structs/Input.h"
+#include "../../include/structs/Output.h"
+#include "../../include/structs/User_Input.h"
+#include "../../include/structs/User_Output.h"
 #include <array>
 #include <iostream>
     CLIBOpenEpiCentre::Data_Control* CLIBOpenEpiCentre::Data::_stat_CLASS_ptr_Data_Control;

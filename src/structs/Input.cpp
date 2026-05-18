@@ -1,8 +1,8 @@
-#include "engine/Data.h"
-#include "engine/Framework_Server.h"
-#include "engine/Server.h"
-#include "structs/Input.h"
-#include "structs/User_Input.h"
+#include "../../include/engine/Data.h"
+#include "../../include/engine/Framework_Server.h"
+#include "../../include/engine/Server.h"
+#include "../../include/structs/Input.h"
+#include "../../include/structs/User_Input.h"
 #include <cstdint>
 #include <iostream>
 #include <list>
